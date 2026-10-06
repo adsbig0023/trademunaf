@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Arun Trademax Academy</title>
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f5f7fb;
+  color:#111827;
+}
+
+.page{
+  width:100%;
+  max-width:700px;
+  margin:auto;
+  padding:20px 15px 18px;
+}
+
+/* TOP */
+
+.top{
+  text-align:center;
+}
+
+.online{
+  display:inline-block;
+  background:#e7f9ed;
+  color:#249653;
+  padding:9px 18px;
+  border-radius:30px;
+  font-size:15px;
+  font-weight:bold;
+  margin-bottom:16px;
+}
+
+.online::before{
+  content:"●";
+  color:#22c55e;
+  margin-right:8px;
+}
+
+/* PROFILE PHOTO */
+
+.profile{
+  width:135px;
+  height:135px;
+  border-radius:50%;
+  object-fit:cover;
+  border:5px solid white;
+  box-shadow:0 4px 15px rgba(0,0,0,.15);
+  display:block;
+  margin:0 auto 15px;
+}
+
+/* TITLE */
+
+.title{
+  font-size:29px;
+  font-weight:800;
+  line-height:1.15;
+  margin-bottom:7px;
+}
+
+.subtitle{
+  color:#1769c2;
+  font-size:17px;
+  font-weight:bold;
+  margin-bottom:15px;
+}
+
+.stars{
+  color:#f59e0b;
+  font-size:25px;
+  letter-spacing:2px;
+}
+
+.reviews{
+  color:#777;
+  font-size:15px;
+  margin-top:5px;
+  margin-bottom:20px;
+}
+
+/* MAIN TELEGRAM BUTTON */
+
+.telegram-btn{
+  display:block;
+  width:100%;
+  text-decoration:none;
+  background:linear-gradient(135deg,#087df5,#0759d8);
+  color:white;
+  text-align:center;
+  padding:21px 15px;
+  border-radius:15px;
+  font-size:20px;
+  font-weight:bold;
+  margin:0 auto 20px;
+  box-shadow:0 5px 15px rgba(0,100,255,.20);
+}
+
+.telegram-btn:active{
+  transform:scale(.98);
+}
+
+/* STATS */
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+  margin-bottom:22px;
+}
+
+.stat{
+  background:white;
+  border-radius:14px;
+  padding:15px 5px;
+  text-align:center;
+  box-shadow:0 2px 10px rgba(0,0,0,.06);
+}
+
+.stat strong{
+  display:block;
+  color:#0868cf;
+  font-size:25px;
+  margin-bottom:4px;
+}
+
+.stat span{
+  font-size:14px;
+}
+
+/* HEADING */
+
+.main-heading{
+  text-align:center;
+  font-size:21px;
+  line-height:1.35;
+  margin-bottom:7px;
+}
+
+.blue{
+  color:#0868cf;
+}
+
+.description{
+  text-align:center;
+  color:#777;
+  font-size:15px;
+  margin-bottom:18px;
+}
+
+/* LIMITED ACCESS */
+
+.limited{
+  background:#fff2dc;
+  color:#e77817;
+  text-align:center;
+  padding:13px 8px;
+  border-radius:25px;
+  font-size:15px;
+  font-weight:bold;
+  margin-bottom:18px;
+}
+
+/* FEATURES */
+
+.feature{
+  background:white;
+  border-radius:14px;
+  padding:17px 15px;
+  margin-bottom:9px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  box-shadow:0 2px 9px rgba(0,0,0,.06);
+}
+
+.icon{
+  font-size:27px;
+  width:35px;
+  text-align:center;
+}
+
+.feature-text{
+  font-size:16px;
+}
+
+.feature-text strong{
+  display:block;
+}
+
+/* ADS MANAGER BUTTON */
+/* Ye jaan-bujhkar chhota rakha gaya hai */
+
+.agency-btn{
+  display:block;
+  width:70%;
+  margin:16px auto 0;
+  text-decoration:none;
+  background:linear-gradient(135deg,#087df5,#0759d8);
+  color:white;
+  text-align:center;
+  padding:11px 8px;
+  border-radius:10px;
+  font-size:13px;
+  font-weight:bold;
+  box-shadow:0 3px 10px rgba(0,100,255,.18);
+}
+
+.agency-btn:active{
+  transform:scale(.98);
+}
+
+.agency-small{
+  display:block;
+  font-size:9px;
+  font-weight:normal;
+  margin-top:3px;
+  opacity:.95;
+}
+
+/* DISCLAIMER */
+
+.disclaimer{
+  text-align:center;
+  color:#999;
+  font-size:11px;
+  line-height:1.5;
+  margin:15px 15px 0;
+}
+
+.disclaimer strong{
+  display:block;
+  font-size:13px;
+  color:#888;
+  margin-bottom:3px;
+}
+
+/* MOBILE */
+
+@media(max-width:400px){
+
+  .page{
+    padding:18px 12px;
+  }
+
+  .title{
+    font-size:25px;
+  }
+
+  .subtitle{
+    font-size:16px;
+  }
+
+  .telegram-btn{
+    font-size:17px;
+    padding:19px 10px;
+  }
+
+  .stat strong{
+    font-size:22px;
+  }
+
+  .feature-text{
+    font-size:15px;
+  }
+
+  .agency-btn{
+    width:65%;
+    font-size:12px;
+    padding:10px 6px;
+  }
+
+  .agency-small{
+    font-size:8px;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="page">
+
+<!-- =========================
+     TOP SECTION
+========================= -->
+
+<div class="top">
+
+  <div class="online">
+    5,947 Traders Online Now
+  </div>
+
+  <!-- Apni photo ka naam profile.jpg rakhein -->
+  <img src="profile.jpg"
+       class="profile"
+       alt="Profile">
+
+  <h1 class="title">
+    ARUN TRADEMAX ACADEMY™
+  </h1>
+
+  <div class="subtitle">
+    🏆 India's No.1 Stock Market Channel
+  </div>
+
+  <div class="stars">
+    ★★★★★
+  </div>
+
+  <div class="reviews">
+    4.9/5 (2340 Reviews)
+  </div>
+
+</div>
+
+
+<!-- =========================
+     CLIENT BUTTON 1
+========================= -->
+
+<a href="CLIENT_TELEGRAM_LINK"
+   class="telegram-btn"
+   target="_blank">
+
+   Join Free Telegram Channel →
+
+</a>
+
+
+<!-- =========================
+     STATS
+========================= -->
+
+<div class="stats">
+
+  <div class="stat">
+    <strong>50K+</strong>
+    <span>Members</span>
+  </div>
+
+  <div class="stat">
+    <strong>5+</strong>
+    <span>Years</span>
+  </div>
+
+  <div class="stat">
+    <strong>95%</strong>
+    <span>Accuracy</span>
+  </div>
+
+</div>
+
+
+<!-- =========================
+     MAIN CONTENT
+========================= -->
+
+<h2 class="main-heading">
+
+  Get <span class="blue">FREE Daily Calls</span><br>
+
+  for NIFTY, BANKNIFTY & SENSEX
+
+</h2>
+
+<p class="description">
+
+  Join thousands of traders getting daily market analysis
+
+</p>
+
+
+<div class="limited">
+
+  🔥 Limited FREE Access Available
+
+</div>
+
+
+<!-- =========================
+     FEATURES
+========================= -->
+
+<div class="feature">
+
+  <div class="icon">📊</div>
+
+  <div class="feature-text">
+    <strong>Daily Nifty & BankNifty Levels</strong>
+  </div>
+
+</div>
+
+
+<div class="feature">
+
+  <div class="icon">🎓</div>
+
+  <div class="feature-text">
+    <strong>Educational Market Analysis</strong>
+  </div>
+
+</div>
+
+
+<div class="feature">
+
+  <div class="icon">👥</div>
+
+  <div class="feature-text">
+    <strong>50,000+ Subscribers Community</strong>
+  </div>
+
+</div>
+
+
+<!-- =========================
+     CLIENT BUTTON 2
+========================= -->
+
+<a href="CLIENT_TELEGRAM_LINK"
+   class="telegram-btn"
+   target="_blank">
+
+   Join Free Telegram Channel →
+
+</a>
+
+
+<!-- =========================
+     ADS MANAGER
+     AGENCY TELEGRAM LINK
+========================= -->
+
+<a href="AGENCY_TELEGRAM_LINK"
+   class="agency-btn"
+   target="_blank">
+
+   📢 Ads Manager by AdsBig Agency →
+
+   <span class="agency-small">
+      Telegram Promotion & Advertising
+   </span>
+
+</a>
+
+
+<!-- =========================
+     DISCLAIMER
+========================= -->
+
+<div class="disclaimer">
+
+  <strong>Disclaimer:</strong>
+
+  This channel is for educational purposes only.
+  Trading involves market risk. Please consult your
+  financial advisor before making investment decisions.
+
+</div>
+
+
+</div>
+
+</body>
+</html>
